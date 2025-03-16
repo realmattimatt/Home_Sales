@@ -65,6 +65,9 @@ Analyze home sales data using PySpark to derive key insights and trends, includi
 - 🌅 **Query 3: Effect of View Ratings on Home Prices**
   ![Sample Query 3](Images/Query_3.png)
 
+- 🛠️ **Uncaching Temporary Tables in PySpark**
+  ![Uncaching Temporary Tables](Images/uncache_sample.png)
+
 
 ## **Data Source**
 This dataset was provided as part of the **edX Data Science Boot Camp** curriculum and is intended for **educational purposes only**. It is not publicly available.
