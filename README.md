@@ -5,8 +5,10 @@
   - [**Table of Contents**](#table-of-contents)
   - [**Project Overview**](#project-overview)
     - [**Objective**](#objective)
-    - [**Key Findings**](#key-findings)
+  - [**Key Findings**](#key-findings)
+    - [Query Optimizations](#query-optimizations)
   - [**Summary**](#summary)
+    - [Data Analysis Results](#data-analysis-results)
   - [**Technologies / Dependencies Needed and Used**](#technologies--dependencies-needed-and-used)
   - [**How to Run the Application**](#how-to-run-the-application)
     - [**Option 1: Run Locally**](#option-1-run-locally)
@@ -27,12 +29,21 @@ Analyze home sales data using PySpark to derive key insights and trends, includi
 - **Market trends for real estate investors**
 
 
-### **Key Findings**
-........................
+## **Key Findings**
+### Query Optimizations
+I executed the same query using three different data processing techniques to compare performance (**performance results may vary slightly with each execution**):
+
+1. **Standard Query**: 1.69 seconds
+2. **Cached Query**: 0.52 seconds (**69% improvement**)
+3. **Partitioned Parquet**: 0.61 seconds (**64% improvement**)
 
 
 ## **Summary**
-.....................
+### Data Analysis Results
+- The average price of four-bedroom houses has remained relatively stable from 2019-2022, ranging from approximately $296,000 to $302,000.
+- Homes with 3 bedrooms and 3 bathrooms showed consistent average prices across construction years, with prices generally between $288,000 and $296,000.
+- For 3-bedroom, 3-bathroom homes with 2 floors and at least 2,000 square feet, the highest average prices were observed in homes built in 2012 ($307,539) and 2013 ($303,676).
+- Properties with higher view ratings consistently command premium prices, with homes having view ratings of 91-100 frequently exceed $1 million on average.
 
 ## **Technologies / Dependencies Needed and Used**
 - **findspark**: Enables the use of PySpark in Jupyter Notebooks or standalone scripts by locating the Spark installation.
@@ -85,7 +96,7 @@ This dataset was provided as part of the **edX Data Science Boot Camp** curricul
 
 
 ## **License**
-This project is licensed under the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](./LICENSE) - see the LICENSE file for details here.
+[GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](./LICENSE) - see the LICENSE file for details here.
 
 ## **Project By**
 **Matthew Matti**
